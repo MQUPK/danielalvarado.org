@@ -1,0 +1,23 @@
+baseURL = "https://mqupk.github.io/"
+title = "Daniel Alvarado"
+theme = "PaperMod"
+languageCode = "en-us"
+
+[params]
+  author = "Daniel Alvarado"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowToc = true
+  ShowBreadCrumbs = true
+
+[menu]
+
+  [[menu.main]]
+    name = "Welcome"
+    url = "/welcome/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
