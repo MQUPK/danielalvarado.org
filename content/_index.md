@@ -1,6 +1,7 @@
 +++
-draft = false
 title = 'Home'
+
+draft = false
 +++
 
 

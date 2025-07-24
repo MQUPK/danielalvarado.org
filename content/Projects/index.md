@@ -1,8 +1,8 @@
 +++
 
-draft = false
-
 title = 'Projects'
+
+draft = false
 
 +++
 
