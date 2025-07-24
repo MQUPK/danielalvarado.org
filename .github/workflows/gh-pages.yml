@@ -1,0 +1,92 @@
+name: GitHub Pages
+
+
+
+on:
+
+&nbsp; push:
+
+&nbsp;   branches:
+
+&nbsp;     - main  # or 'master' if that’s your default
+
+
+
+permissions:
+
+&nbsp; contents: read
+
+&nbsp; pages: write
+
+&nbsp; id-token: write
+
+
+
+jobs:
+
+&nbsp; build:
+
+&nbsp;   runs-on: ubuntu-latest
+
+&nbsp;   steps:
+
+&nbsp;     - name: Checkout
+
+&nbsp;       uses: actions/checkout@v4
+
+
+
+&nbsp;     - name: Setup Hugo
+
+&nbsp;       uses: peaceiris/actions-hugo@v2
+
+&nbsp;       with:
+
+&nbsp;         hugo-version: '0.124.1'
+
+
+
+&nbsp;     - name: Build
+
+&nbsp;       run: hugo --minify
+
+
+
+&nbsp;     - name: Upload artifact
+
+&nbsp;       uses: actions/upload-pages-artifact@v1
+
+&nbsp;       with:
+
+&nbsp;         path: ./public
+
+
+
+&nbsp; deploy:
+
+&nbsp;   needs: build
+
+&nbsp;   runs-on: ubuntu-latest
+
+&nbsp;   permissions:
+
+&nbsp;     pages: write
+
+&nbsp;     id-token: write
+
+&nbsp;   environment:
+
+&nbsp;     name: github-pages
+
+&nbsp;     url: ${{ steps.deployment.outputs.page\_url }}
+
+&nbsp;   steps:
+
+&nbsp;     - name: Deploy to GitHub Pages
+
+&nbsp;       id: deployment
+
+&nbsp;       uses: actions/deploy-pages@v2
+
+
+
