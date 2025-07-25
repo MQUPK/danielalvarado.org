@@ -78,7 +78,7 @@ jobs:
 
      name: github-pages
 
-     url: ${{ steps.deployment.outputs.page\_url }}
+     url: ${{ steps.deployment.outputs.page_url }}
 
    steps:
 
