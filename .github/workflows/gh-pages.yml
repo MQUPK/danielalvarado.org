@@ -4,89 +4,89 @@ name: GitHub Pages
 
 on:
 
-&nbsp; push:
+ push:
 
-&nbsp;   branches:
+   branches:
 
-&nbsp;     - main  # or 'master' if that’s your default
+     - main  # or 'master' if that’s your default
 
 
 
 permissions:
 
-&nbsp; contents: read
+ contents: read
 
-&nbsp; pages: write
+ pages: write
 
-&nbsp; id-token: write
+ id-token: write
 
 
 
 jobs:
 
-&nbsp; build:
+ build:
 
-&nbsp;   runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
 
-&nbsp;   steps:
+   steps:
 
-&nbsp;     - name: Checkout
+     - name: Checkout
 
-&nbsp;       uses: actions/checkout@v4
-
-
-
-&nbsp;     - name: Setup Hugo
-
-&nbsp;       uses: peaceiris/actions-hugo@v2
-
-&nbsp;       with:
-
-&nbsp;         hugo-version: '0.124.1'
+       uses: actions/checkout@v4
 
 
 
-&nbsp;     - name: Build
+     - name: Setup Hugo
 
-&nbsp;       run: hugo --minify
+       uses: peaceiris/actions-hugo@v2
 
+       with:
 
-
-&nbsp;     - name: Upload artifact
-
-&nbsp;       uses: actions/upload-pages-artifact@v1
-
-&nbsp;       with:
-
-&nbsp;         path: ./public
+         hugo-version: '0.124.1'
 
 
 
-&nbsp; deploy:
+     - name: Build
 
-&nbsp;   needs: build
+       run: hugo --minify
 
-&nbsp;   runs-on: ubuntu-latest
 
-&nbsp;   permissions:
 
-&nbsp;     pages: write
+     - name: Upload artifact
 
-&nbsp;     id-token: write
+       uses: actions/upload-pages-artifact@v1
 
-&nbsp;   environment:
+       with:
 
-&nbsp;     name: github-pages
+         path: ./public
 
-&nbsp;     url: ${{ steps.deployment.outputs.page\_url }}
 
-&nbsp;   steps:
 
-&nbsp;     - name: Deploy to GitHub Pages
+ deploy:
 
-&nbsp;       id: deployment
+   needs: build
 
-&nbsp;       uses: actions/deploy-pages@v2
+   runs-on: ubuntu-latest
+
+   permissions:
+
+     pages: write
+
+     id-token: write
+
+   environment:
+
+     name: github-pages
+
+     url: ${{ steps.deployment.outputs.page\_url }}
+
+   steps:
+
+     - name: Deploy to GitHub Pages
+
+       id: deployment
+
+       uses: actions/deploy-pages@v2
 
 
 
