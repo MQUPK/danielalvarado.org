@@ -3,6 +3,7 @@ title = "Daniel Alvarado"
 theme = "PaperMod"
 languageCode = "en-us"
 disableKinds = ["RSS"]
+googleAnalytics = ""
 
 
 [params]
