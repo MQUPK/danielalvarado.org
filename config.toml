@@ -3,8 +3,6 @@ title = "Daniel Alvarado"
 theme = "PaperMod"
 languageCode = "en-us"
 disableKinds = ["RSS"]
-googleAnalytics = ""
-
 
 [params]
   author = "Daniel Alvarado"
@@ -12,6 +10,8 @@ googleAnalytics = ""
   ShowReadingTime = true
   ShowToc = true
   ShowBreadCrumbs = true
+  env = "production"
+  googleAnalytics = ""
 
 [menu]
 
