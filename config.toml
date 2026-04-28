@@ -32,7 +32,7 @@ disableKinds = ["RSS"]
 
   [[menu.main]]
   name = "CV"
-  url = "/uploads/Daniel_Alvarado_CV.pdf"
+  url = "/cv/"
   weight = 4
   
   [[menu.main]]
