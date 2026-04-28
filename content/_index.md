@@ -4,7 +4,7 @@ title = 'Home'
 draft = false
 +++
 
-I am a philosophy and mathematics graduate of UC San Diego, currently working at the intersection of philosophy of mathematics, philosophy of science, and foundations of physics. You can find my latest selected works here.
+I am a philosophy and mathematics graduate of UC San Diego, currently working at the intersection of mathematics, philosophy of science, and foundations of physics. You can find my latest selected works here.
 
 <div style="text-align:center; margin-top: 3rem; opacity: 0.85;">
 <svg width="420" viewBox="0 0 680 420" role="img" xmlns="http://www.w3.org/2000/svg">
