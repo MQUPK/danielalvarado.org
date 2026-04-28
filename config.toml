@@ -29,3 +29,13 @@ disableKinds = ["RSS"]
   name = "About"
   url = "/about/"
   weight = 3
+
+  [[menu.main]]
+  name = "CV"
+  url = "/cv/"
+  weight = 4
+  
+  [[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 5
